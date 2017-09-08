@@ -1,0 +1,23 @@
+[
+  {
+    "userName": "hmz",
+    "password1": "111",
+    "password2": "111",
+    "sex": "0",
+    "email": "651734877@qq.com"
+  },
+  {
+    "userName": "admin",
+    "password1": "123",
+    "password2": "123",
+    "sex": "0",
+    "email": "4041812@qq.com"
+  },
+  {
+    "userName": "黄明照",
+    "password1": "123456",
+    "password2": "123456",
+    "sex": "0",
+    "email": "651734877@qq.com"
+  }
+]

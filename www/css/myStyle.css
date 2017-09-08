@@ -1,0 +1,39 @@
+.headImg{
+    width: 64px;
+    height: 64px;
+}
+.media-body{
+    padding-left: 10px;
+}
+.askContent>p{
+    font-size: 18px;
+    font-weight: bold;
+}
+.answerInfo p{
+    padding: 10px;
+    display: inline-block;
+    margin-bottom: 0px;
+    vertical-align: middle;
+}
+.answerInfo p>span{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.answerInfo div{
+    display: inline-block;
+    vertical-align: middle;
+}
+.answerInfo div .headImg{
+    width: 50px;
+    height: 50px;
+}
+.answerContent{
+    overflow: hidden;
+}
+.answerContent>p{
+    color: rgba(0,0,0,0.5);
+    font-size: 18px;
+}
+textarea{
+    font-size: 18px;
+}

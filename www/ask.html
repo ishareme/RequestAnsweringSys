@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>问答系统</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myStyle.css">
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div>
+            <ul class="nav navbar-nav navbar-left">
+                <a href="JavaScript:history.go(-1)"><span class="glyphicon glyphicon-chevron-left" style="line-height: 50px;color: rgb(119,119,119)"></span></a>
+            </ul>
+            <ul class="nav navbar-nav navbar-left" style="margin-left: 48%;line-height: 50px;font-size: 18px">
+                提问
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> 个人中心 </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="login.html">登录</a></li>
+                        <li><a href="register.html">注册</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="txUpload.html">设置头像</a></li>
+                        <li><a href="#">退出登录</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="content">
+    <div class="container">
+        <form id="askForm">
+            <div class="form-group col-md-10 col-md-offset-1">
+                <textarea class="form-control" rows="10" name="askContent" id="askContent"></textarea>
+            </div>
+            <button type="submit" id="askBtn"  class="btn btn-danger col-md-offset-2 col-md-8" data-toggle="" data-target=""> 提 交 </button>
+        </form>
+    </div>
+</div>
+
+<script src="js/jquery-3.2.1.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="js/jquery.validate.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<script src="js/loginout.js"></script>
+<script src="js/ajaxAsk.js"></script>
+</body>
+</html>

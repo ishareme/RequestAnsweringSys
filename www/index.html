@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>问答系统</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myStyle.css">
+    <script src="js/template-web.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navB" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">问答系统</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navB">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="ask.html"><span class="glyphicon glyphicon-pencil"></span> 提问 </a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> 个人中心 </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="login.html">登录</a></li>
+                        <li><a href="register.html">注册</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="txUpload.html">设置头像</a></li>
+                        <li><a href="#">退出登录</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="content">
+    <div class="container">
+        <!--<div class="panel panel-default">-->
+            <!--<div class="panel-heading">-->
+                <!--<div class="media">-->
+                    <!--<div class="media-left media-middle">-->
+                        <!--<a href="#">-->
+                            <!--<img src="img/1.jpg" class="img-circle media-object headImg">-->
+                        <!--</a>-->
+                    <!--</div>-->
+                    <!--<div class="media-body">-->
+                        <!--<h4 class="askName">iShareMe</h4>-->
+                        <!--<h5 class="askTime">2017/07/25 17:02</h5>-->
+                        <!--<h5 class="askIp">localhost</h5>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="panel-body">-->
+                <!--<div class="askContent">-->
+                    <!--<p>你在干嘛呢？</p>-->
+                    <!--<div class="editAnswer">-->
+                        <!--<textarea class="form-control" rows="5" name="answerContent" id="answerContent"></textarea>-->
+                    <!--</div>-->
+                    <!--<div class="answerBtn">-->
+                        <!--<input class="btn btn-default pull-right answerBtn" type="submit" value="我要回答">-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="panel-footer">-->
+                <!--<div class="answerContent">-->
+                    <!--<p>我在学习</p>-->
+                    <!--<div class="answerInfo pull-right">-->
+                        <!--<p>-->
+                            <!--<span class="answerName">回答者:iShareMe</span>-->
+                            <!--<span class="answerTime">2017/07/25 17:02</span>-->
+                            <!--<span class="answerIp">localhost</span>-->
+                        <!--</p>-->
+                        <!--<div>-->
+                            <!--<img src="img/1.jpg" class="img-circle headImg">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="panel panel-default">-->
+            <!--<div class="panel-heading">-->
+                <!--<div class="media">-->
+                    <!--<div class="media-left media-middle">-->
+                        <!--<a href="#">-->
+                            <!--<img src="img/1.jpg" class="img-circle media-object headImg">-->
+                        <!--</a>-->
+                    <!--</div>-->
+                    <!--<div class="media-body">-->
+                        <!--<h4 class="askName">iShareMe</h4>-->
+                        <!--<h5 class="askTime">2017/07/25 17:02</h5>-->
+                        <!--<h5 class="askIp">localhost</h5>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="panel-body">-->
+                <!--<div class="askContent">-->
+                    <!--<p>你在干嘛呢？</p>-->
+                    <!--<div class="answerBtn">-->
+                        <!--<input class="btn btn-default pull-right answerBtn" type="submit" value="我要回答">-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="panel-footer">-->
+                <!--<div class="answerContent">-->
+                    <!--<p>我在学习</p>-->
+                    <!--<div class="answerInfo pull-right">-->
+                        <!--<p>-->
+                            <!--<span class="answerName">回答者:iShareMe</span>-->
+                            <!--<span class="answerTime">2017/07/25 17:02</span>-->
+                            <!--<span class="answerIp">localhost</span>-->
+                        <!--</p>-->
+                        <!--<div>-->
+                            <!--<img src="img/1.jpg" class="img-circle headImg">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+</div>
+
+<script src="js/jquery-3.2.1.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<script src="js/loginout.js"></script>
+<script type="text/html" id="askShow">
+    {{each}}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="media">
+                <div class="media-left media-middle">
+                    <a href="#">
+                        <img src="upload/{{$value.userName}}.jpg" class="img-circle media-object headImg">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="askName">{{$value.userName}}</h4>
+                    <h5 class="askTime">{{$value.time}}</h5>
+                    <h5 class="askIp">{{$value.ip}}</h5>
+                </div>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="askContent">
+                <p>{{$value.askContent}}</p>
+                <div class="answerArea">
+                    <textarea class="form-control answerContent" rows="5" name="answerContent"></textarea>
+                </div>
+                <div class="answerBtnArea">
+                    <input class="btn btn-default pull-right answerBtn" type="submit" value="我要回答" data-index='{{$value.id}}'>
+                </div>
+            </div>
+        </div>
+        {{include 'panel-footer' $value.answer}}
+    </div>
+    {{/each}}
+</script>
+<script type="text/html" id="panel-footer">
+    {{each}}
+    {{if  $value.answerContent != '' }}
+    <div class="panel-footer">
+        <div class="answerContent">
+            <p>{{$value.answerContent}}</p>
+            <div class="answerInfo pull-right">
+                <p>
+                    <span class="answerName">回答者:{{$value.userName}}</span>
+                    <span class="answerTime">{{$value.time}}</span>
+                    <span class="answerIp">IP:{{$value.ip}}</span>
+                </p>
+                <div>
+                    <img src="upload/{{$value.userName}}.jpg" class="img-circle headImg">
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/if }}
+    {{/each}}
+
+
+</script>
+<script src="js/index.js"></script>
+</body>
+</html>
